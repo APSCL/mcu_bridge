@@ -34,14 +34,14 @@ def main(args=None):
     basic_bridge = BasicBridge()
 
     rclpy.spin(basic_bridge)
-    
-    mcu.close()
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
     basic_bridge.destroy_node()
     rclpy.shutdown()
+    
+    mcu.close()
 
 
 if __name__ == '__main__':
